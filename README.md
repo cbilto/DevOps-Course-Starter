@@ -40,3 +40,13 @@ The `.env` file is used by flask to set environment variables when running `flas
 * There's also a [SECRET_KEY](https://flask.palletsprojects.com/en/1.1.x/config/#SECRET_KEY) variable which is used to encrypt the flask session cookie.
 
 When running `setup.sh`, the `.env.template` file will be copied to `.env` if the latter does not exist.
+
+## VPN Setup
+
+To get the application working with the VPN you'll need to run this in your terminal first:
+
+```
+export HTTP_PROXY=http://proxy.aexp.com:8080
+export HTTPS_PROXY=http://proxy.aexp.com:8080
+export NO_PROXY=.aexp.com, localhost
+```
